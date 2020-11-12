@@ -1,0 +1,23 @@
+- HTTP
+- database
+- Front API (외부에 노출된 API)
+  - Web Framework
+  - Spring (Java)
+  - Nodejs (Javascript)
+  - Gin (gopher)
+  - Django, Flask (python)
+- 클라우드 기술
+  - AWS (Amazon)
+  - Azure(Microsoft)
+  - GCP(Hoogle)
+- Network
+- OS
+- MSA
+- Security
+  - hacking
+  - back-up
+  - monitoring
+- DevOps
+ - 개발 + 운영
+ - test automation
+ - integraion test
