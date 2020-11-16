@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>브라우저 제어하기</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.2/purify.min.js" integrity="sha512-T6jx0SL5artICbQxeQCg3iToWGEuWM6P2XjNxP1vMI6fNtgIb3dnVD5gpd/pkQKoMfi1ygq5ezv/Z2VB3lLGtw==" crossorigin="anonymous"></script>
+        <style>
+            .box{
+                width: 150px;
+                height: 150px;
+                background-color: beige;
+            }
+            .b1{background-color: coral;}
+            .b2{background-color: skyblue;}
+            .b3{background-color: yellowgreen}
+
+            .cbox{
+                width: 150px;
+                height: 150px;
+                background-color: beige;
+                cursor: pointer;
+            }
+            p {
+                background-color: crimson;
+                cursor: pointer;
+            }
+            s {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="root">
+            <li>1뎁스 - 1</li>
+            <li>1뎁스 - 2</li>
+            <li>1뎁스 - 3</li>
+            <li>1뎁스 - 4</li>
+            <ul>
+                <li>2뎁스 - 1</li>
+                <li>2뎁스 - 2</li>
+                <ul>
+                    <li>3뎁스 - 1</li>
+                    <li>3뎁스 - 2</li>
+                    <li>3뎁스 - 3</li>
+                    <ul>
+                        <li>4뎁스 - 1</li>
+                        <li>4뎁스 - 2</li>
+                        <li>4뎁스 - 3</li>
+                    </ul>
+                </ul>
+            </ul>
+            <li>1뎁스 - 5</li>
+            <ul>
+                <li>2뎁스</li>
+            </ul>
+        </ul>
+        <script>
+                function handleClick() {
+                alert('function triggered')
+            }
+        </script>
+
+        <div ondblclick="handleClick()" class="box b1">box1 더블클릭 출력</div>
+        <div onmouseover="handleClick()" class="box b2">box2 마우스 올려놓으면 출력</div>
+        <div class="box b3" id="boxbox">box3 더블클릭 출력</div>
+        <div class="box b4" id="boxbox2">box4 입력받은 값을 출력</div>
+        <div class="box b5" id="boxbox3">box5 방향키따라 움직임</div>
+        <div onclick="alert('div')" class="cbox">
+            <p onclick="alert('p')" >클릭하면 왜 div도 나올까?</p>
+        </div>
+        <div id="d">
+            <p id="p">
+                <span id="s">stopPropagation는 전파가 안된다</span>
+            </p>
+        </div>
+      <script>
+           const box = document.querySelector('#boxbox')
+            box.onclick = () => {
+                alert('triggered')
+            }
+            const box1 = document.querySelector('#boxbox2')
+            document.body.addEventListener  ('keypress', e => {
+              console.log(e.key)
+             const currentValue = box1.innerText
+                box1.innerText = currentValue + e.key
+            })
+            const move = document.querySelector('#boxbox3')
+            let x = 0
+            let y = 0
+            move.addEventListener  ('keydown', e => {
+            switch(e.key){
+                case 'ArrowUp' :
+                y -= 10
+                    break;
+                case 'ArrowDown' :
+                y += 10
+                break;
+                case 'ArrowLeft' :
+                x -= 10
+                break;
+                case 'ArrowRight' :
+                x += 10
+                break;
+            }
+                box.style.transform = `translate3d(${x}px, ${y}px, 0)`
+            })
+            const d =document.getElementById('d')
+            const p =document.getElementById('p')
+            const s =document.getElementById('s')
+
+            d.addEventListener('click', e => {
+                console.log('div 누름')
+            })
+            p.addEventListener('click', e => {
+                console.log('paragraph 누름')
+            })
+            s.addEventListener('click', e => {
+                e.stopPropagation()
+                console.log('span 누름')
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout tutorial</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <style>
+         *, *::before, *::after {
+             box-sizing: border-box;
+         }
+
+         html, body {
+             margin: 0;
+             font-family: 'Noto Sans KR', sans-serif;
+             line-height: 1.6;
+         }
+
+         .hero {
+                background-image: 
+                url('https://mblogthumb-phinf.pstatic.net/MjAxODAyMDNfNzQg/MDAxNTE3NjMwODA1MTQ1.E9A6LEaIqwWyoTq0mdJceM4Ny8-NOCkGVFPYv16q4HUg.inga0eidVaugTadWR1wV5j_6ykrwwlt6V9ffGgEZD5Ag.JPEG.knicjin/wallpaper_21.jpg?type=w800'),
+                radial-gradient(#ccc, #111);
+                background-blend-mode: multiply;
+                background-attachment: fixed ;
+                background-repeat: no-repeat;
+                background-position: center center;
+                height: 100vh;
+                color: #ccc;
+          }
+
+         h1, p, blockquote {
+             margin: 0;
+             text-align: center;
+         }
+
+         .container {
+             width: 85%;
+             max-width: 65em;
+             margin: 0 auto;
+         }
+
+         .primary-title{
+             font-size: clamp(2.5rem, calc(5vw + 1rem));
+         }
+
+         .article-spacing {
+             margin-top: 5rem;
+             width: 40%;
+         }
+
+         .article-spacing > h1 {
+             font-size: 2rem;
+             margin-bottom: 1.3rem;
+         }
+
+         .article-spacing > p, blockquote{
+             font-size: 1rem;
+             text-indent: 1rem;
+             margin-bottom: 2.4rem;
+         }
+
+         .article-spacing > blockquote {
+             padding-left: 1rem;
+             border-left: 5px solid black;
+             background-color: #f5f5f5;
+         }
+
+         .article-spacing > p:hover {
+            background-color: #f5f5f5;
+            cursor: pointer;
+         }
+         .img-box{
+             margin-bottom: 1.2rem;
+             text-align: center;
+         }
+
+         .img-box >img {
+             filter: brightness(90%);
+             width: 100%;
+             display: block;
+             margin: 0 auto;
+         }
+
+         .img-box > p {
+             color: #555555;
+         }
+
+         .img-box > img:hover {
+             filter: brightness(110%);
+             cursor: pointer;
+         }
+
+         footer{
+             background-color: rgba(0,0,0,0);
+         }
+         
+         .info-container {
+             display: flex;
+             width: 100vw;
+             height: 20vh;
+             background-color: beige;
+         }
+
+         .info-container-item {
+             flex: 1 1 0;
+             width: 80%;
+             margin: 0 auto;
+         }
+         
+        </style>
+    </head>
+    <body>
+        <header class="hero">
+
+            <div class="container">
+                <h1 class="primary-title">제목 썸띵</h1>
+                <p>서브타이틀</p>
+            </div>
+
+        </header>
+        <main>
+            <article>
+                <div class="container article-spacing">
+                    <h1>제목1</h1>
+                    <p>모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.</p>
+                    <blockquote>
+                        <p>인용구1</p>
+                        <p>인용구2</p>
+                    </blockquote>
+                    <p>모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.</p>
+                    <h1>제목 2</h1>
+                    <p>모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.</p>
+                    <div class="img-box">
+                        <img src="https://t1.daumcdn.net/cfile/blog/03458A3C51AE0AA109" alt="">
+                        <p>아아... 이건 하늘이다. 저건 구름이다.</p>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="container info-container">
+                    <div class="info-container-item">
+                        <h1>제목1</h1>
+                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                    </div>
+                    <div class="info-container-item">
+                        <h1>제목2</h1>
+                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                    </div>
+                    <div class="info-container-item">
+                        <h1>제목3</h1>
+                        <p>헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다. 선거운동은 각급 선거관리위원회의 관리하에 법률이 정하는 범위안에서 하되, 균등한 기회가 보장되어야 한다.
+                            국가는 농·어민과 중소기업의 자조조직을 육성하여야 하며, 그 자율적 활동과 발전을 보장한다. 대법원장은 국회의 동의를 얻어 대통령이 임명한다. 학교교육 및 평생교육을 포함한 교육제도와 그 운영, 교육재정 및 교원의 지위에 관한 기본적인 사항은 법률로 정한다.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
