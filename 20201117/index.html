@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>20201117</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <style>
+            *, *::before, *::after{
+                box-sizing: border-box;
+            }
+
+            html, body {
+                font-family: 'Noto Sans KR', sans-serif;
+                margin: 0;
+                line-height: 1.6;
+            }
+
+            header {
+
+            }
+
+            .container {
+                width: 85%;
+                margin: 0 auto;
+                max-width: 65em;
+            }
+
+            .hero {
+                background-image: 
+                url('https://github.com/hyeyoom/kh-lecture-2020/blob/master/layout/img/bg.jpeg?raw=true'),
+                radial-gradient(#ccc, #111);
+                background-repeat: no-repeat;
+                background-blend-mode: multiply;
+                background-attachment: fixed;
+                height: 100vh;
+                color: white;
+                padding-top: 35rem;
+            }
+
+            h1, p, blockquote {
+                margin: 0;
+            }
+
+            .primary-title {
+                font-size: clamp(3rem, calc(5vw + 1rem ), 4.5rem);
+            }
+
+            .article-spacing {
+                margin-top: 5rem;
+                width: 40%;
+            }
+
+            .article-spacing > h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .article-spacing > p, blockquote {
+                font-size: 1.3rem;
+                text-indent: 1rem;
+                margin-bottom: 2.4rem;
+            }
+
+            .article-spacing > blockquote {
+                padding-left: 2rem;
+                border-left: 5px solid black;
+                background-color: #f5f5f5;
+            }
+
+            .image-box {
+                margin-bottom: 1.2rem;
+                text-align: center;
+            }
+
+            .image-box > p {
+                font-size: 1.2rem;
+                color: #555555;
+            }
+
+            .image-box > img {
+                width: 85%;
+                display: block;
+                margin: 0 auto;
+                cursor: pointer;
+            }
+
+            main {
+
+            }
+
+            footer {
+                background-color: rgba(0, 0, 0, 9);
+                color: white;
+                padding: 5rem 0;
+            }
+
+            .footer-container {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            .info-container {
+                display: flex;
+                padding-bottom: 2rem;
+                border-bottom: 3px dotted silver;
+                
+            }
+
+            .info-item {
+                flex: 1 1 0;
+                padding: 0 1rem;
+            }
+
+            .info-item > h2 {
+                display: flex;
+                font-size: 1.5rem;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+
+            .info-item > p {
+                font-size: 0.8rem;
+            }
+
+            .logo-container {
+                display: flex;
+                padding-top: 3rem;
+                justify-content: space-between;
+            }
+            .logo-image > img{
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .logo-item {
+                display: flex;
+                width: 25%;
+            }
+
+            .logo-item > div {
+                flex: 1 1 0;
+                text-align: center;
+                font-weight: 300;
+                padding: 0 0.4rem;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="hero">
+            <div class="container">
+                <h1 class="primary-title">제목</h1>
+                <p>서브제목</p>
+                <p>2020 11 17 </p>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="container article-spacing">
+                    <h1>본문 제목</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                   
+                    <blockquote>
+                        <p>인용구</p>
+                        <p>인용구</p>
+                        <p>인용구</p>
+                    </blockquote>
+
+
+                    <h1>본문 제목2</h1>
+                    <div class="image-box">
+                        <img src="https://static.dw.com/image/49202627_303.jpg
+                        " alt="">
+                        <p>멍멍이</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at tortor aliquet, pretium quam pulvinar, posuere nulla. Morbi non fringilla urna, eu molestie augue. Donec et massa egestas, molestie orci nec, feugiat mi. Ut placerat, purus fringilla gravida tristique, velit massa consectetur enim, at aliquam nibh mauris eu nulla. Maecenas et pulvinar nibh, eu pulvinar ex. Pellentesque nisl est, vehicula non pulvinar at, luctus sit amet odio. Donec consequat ipsum tortor, id luctus libero interdum id. Donec ac sapien arcu. Proin velit sapien, hendrerit quis diam ut, semper volutpat augue. Nullam luctus mattis faucibus. Pellentesque volutpat rutrum interdum. Aliquam finibus nulla ex. Duis quis arcu augue.</p>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="info-container">
+                    <div class="info-item">
+                    <h2>Learn more.</h2>
+                    <p>별 그리고 하나의 하나에 까닭입니다. 이름과 잠, 어머님, 우는 있습니다. 하늘에는 별 노루, 내 위에 아스라히 나의 거외다.</p>
+                    </div>
+                    <div class="info-item">
+                        <h2>Learn more.</h2>
+                        <p>별 그리고 하나의 하나에 까닭입니다. 이름과 잠, 어머님, 우는 있습니다. 하늘에는 별 노루, 내 위에 아스라히 나의 거외다.</p>
+                    </div>
+                    <div class="info-item"> 
+                        <h2>Learn more.</h2>
+                        <p>별 그리고 하나의 하나에 까닭입니다. 이름과 잠, 어머님, 우는 있습니다. 하늘에는 별 노루, 내 위에 아스라히 나의 거외다.</p>
+                    </div>
+                </div>
+                <div class="logo-container">
+                    <div class="logo-image">
+                        <img src="https://blog.kakaocdn.net/dn/Sq4OD/btqzlkr13eD/dYwFnscXEA6YIOHckdPDDk/img.jpg" alt="">
+                    </div>
+                    <div class="logo-item">
+                        <div>
+                            <p>About</p>
+                        </div>
+                        <div>
+                            <p>Help</p>
+                        </div>
+                        <div>
+                            <p>Legal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
