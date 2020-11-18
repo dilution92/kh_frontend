@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <style>
+
+            html, body {
+                font-family: 'Noto Sans KR', sans-serif;
+                margin: 0;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            .form-container {
+                max-width: 550px;
+                margin: 0 auto;
+                height: 100vh;
+                padding: 0 45px 0 45px;
+            }
+
+            .logo-container {
+                text-align: center;
+            }
+
+            .logo-container > img {
+                width: 190px;
+                padding-top: 50px; 
+            }
+
+            main {
+                margin-top: 1rem;
+            }
+            
+            .member-title {
+                margin-bottom: 1rem;
+            }
+
+            .member-container >div{
+                border-bottom: 2px solid#e52528;
+
+            }
+
+            .member-box {
+                display: flex;
+                width: 100%;
+                height: 3rem;
+                outline: none;
+                
+            }
+
+            .member-box-img {
+                background-color: skyblue;
+                width: 10%;
+                outline: none;
+                border: 1px solid silver;
+                border-left: none;
+            }
+
+            .member-box-input {
+                width: 90%;
+                outline: none;
+                border: 1px solid silver;
+            }
+
+            .member-box-input::placeholder {
+                color: #bbbbbb;
+                font-size: 15px;
+                font-weight: 800;
+                text-indent: 0.8rem;
+            }
+
+            .warn-info {
+                font-size: 13px;
+                color: #e52528;
+                text-indent: 0.8rem;
+            }
+       
+            .check-info {
+                font-size: 12px;
+                margin: 0.5rem 0 1rem 0 ;
+                text-indent: 0.8rem;
+                color: #999999;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <header>
+                <div class="logo-container">
+                    <img src="https://image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png" alt="">
+                </div>
+            </header>
+            <main>
+                <div class="main-box">
+                    <div class="member-title">
+                        회원정보를 입력해주세요
+                    </div>
+                    <div class="member-container">
+                        <div class="member-box">
+                            <img class="member-box-img" src="" alt="">
+                            <input type="email" class="member-box-input"
+                              placeholder="아이디(이메일)"
+                            >
+                        </div>
+                        <p class="warn-info">이메일을 입력하세요.</p>
+                    </div>
+                    <div class="member-container">
+                        <div class="member-box">
+                            <img class="member-box-img" src="" alt="">
+                            <input type="password"" class="member-box-input"
+                              placeholder="비밀번호"
+                            >
+                        </div>
+                        <p class="check-info">X 영문/숫자/특수문자 2가지 이상 조합 (8~20자)</p>
+                        <p class="check-info">X 3개 이상 연속되거나 동일한 문자/숫자 제외</p>
+                        <p class="check-info">X 아이디(이메일) 제외</p>
+                    </div>
+                    <div class="member-container">
+                        <div class="member-box">
+                            <img class="member-box-img" src="" alt="">
+                            <input type="password" class="member-box-input"
+                              placeholder="비밀번호 확인"
+                            >
+                        </div>
+                        <p class="check-info">X 확인을 위해 새 비밀번호를 다시 입력해주세요.</p>
+                    </div>
+                    <div class="member-container">
+                        <div class="member-box">
+                            <img class="member-box-img" src="" alt="">
+                            <input type="text" class="member-box-input"
+                              placeholder="이름"
+                            >
+                        </div>
+                        <p class="warn-info">이름을 정확히 입력하세요.</p>
+                    </div>
+                    <div class="member-container">
+                        <div class="member-box">
+                            <img class="member-box-img" src="" alt="">
+                            <input type="text" class="member-box-input"
+                              placeholder="휴대전화"
+                            >
+                        </div>
+                        <p class="warn-info">휴대폰 번호를 정확하게 입력하세요.</p>
+                    </div>
+                </div>
+            </main>
+            <footer>
+
+            </footer>
+        </div>
+    </body>
+</html>
