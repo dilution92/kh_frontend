@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>네이버 : 회원가입</title>
+
+        <style>
+
+            html, body {
+                margin: 0;
+                background-color: #efefef;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            .form-container {
+                max-width: 550px;
+                height: 130vh;
+                margin: 0 auto;
+                padding: 0 45px 0 45px;
+            }
+            header {
+                height: 150px;
+                text-align: center;
+
+            }
+            
+            .logo {
+                margin-top: 3.5rem;
+                width: 53%;
+                height: 34%;
+            }
+
+            .content{
+
+            }
+            .content> label {
+                display: inline-block;
+                margin-bottom: 0.4rem;
+                font-weight: bold;
+                font-size: 15px;
+            }
+            .content-input {
+                width: 100%;
+                height: 3.5rem;
+                border: 1px solid silver;
+                font-size: 15px;
+            }
+            .content-input::placeholder {
+                text-align: right;
+                font-size: 15px;
+            }
+            
+            .warn-info {
+                margin-top: 0.5rem;
+                font-size: 13px;
+                color: crimson;
+            }
+
+            .content-date {
+                display: flex;
+            }
+
+            .content-date > select {
+                margin: 0 0.8rem;
+                padding: 0.2rem;
+                font-size: 15px;
+            }
+
+            .content-date-input {
+                flex: 1 1 0;
+                width: 100%;
+                height: 3.5rem;
+                border: 1px solid silver;
+                text-indent: 0.8rem;
+            }
+
+            .content-date-input::placeholder{
+                font-size: 15px;
+            }
+
+            .content.sex {
+                margin-bottom: 0.8rem;
+            }
+
+            .content.email {
+                margin-bottom: 2.5rem;
+            }
+
+            .content-input.email::after{
+                content: "(선택)";
+            }
+
+            .content-input.email::placeholder{
+                text-align: left;
+                text-indent: 0.8rem;
+            }
+
+            .content-input.phone {
+                display: flex;
+                margin-bottom: 0.7rem;
+                border: none;
+            }
+
+            .phone {
+                height: 3.5rem;
+                border: 1px solid silver;
+            }
+
+            .phone::placeholder{
+                text-align: left;
+                text-indent: 0.8rem;
+            }
+
+            .phone.input {
+                width: 70%;
+            }
+
+            .phone.input::placeholder {
+                text-align: left;
+                text-indent: 0.8rem;
+            }
+
+            .phone.btn {
+                margin-left: 0.5rem;
+                width: 30%;
+                background-color: #03c75a ;
+                color: white;
+                font-size: 15px;
+            }
+
+            .content-input.phone-select {
+                border: 1px solid silver;
+                margin-bottom: 0.7rem;
+            }
+
+            .content-input.phone-check {
+                border: 1px solid silver;
+            }
+
+            .content-input.phone-check::placeholder{
+                text-align: left;
+                text-indent: 0.8rem;
+            }
+
+            .content-input.btn{
+                background-color: #03c75a ;
+                color: white;
+                font-size: 18px;
+            }
+
+            footer {
+                margin-top: 2.5rem;
+                color: #aaaaaa;
+            }
+
+            .footer.top {
+                margin-bottom: 0.3rem;
+                display: flex;
+                font-size: 10.5px;
+                text-align: center;
+                padding: 0;
+            }
+            
+            .footer.top-item {
+                padding: 0;
+                flex: 1 1 0;
+            }
+
+            .footer.top-block {
+                margin: 0;
+            }
+
+            .footer.bottom {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <header>
+                <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKmlxDEX1PvynNpR1fP14lxMWurXwvUSK4wA&usqp=CAU" alt="">
+            </header>
+            <main>
+                <div class="content">
+                    <label>
+                        아이디
+                        <span class="content-required"></span>
+                    </label>
+                    <input 
+                      class="content-input" 
+                      type="text" 
+                      placeholder="@naver.com">
+                    <p class="warn-info">필수 정보입니다.</p>
+                </div>
+                <div class="content">
+                    <label>
+                        비밀번호
+                        <span class="content-required"></span>
+                    </label>
+                    <input 
+                      class="content-input" 
+                      type="password" 
+                      placeholder="">
+                      <p class="warn-info">필수 정보입니다.</p>
+                </div>
+                <div class="content">
+                    <label>
+                        비밀번호 재확인
+                        <span class="content-required"></span>
+                    </label>
+                    <input 
+                      class="content-input" 
+                      type="password" 
+                      placeholder="">
+                    <p class="warn-info">필수 정보입니다.</p>
+                </div>
+                <div class="content">
+                    <label>
+                        이름
+                        <span class="content-required"></span>
+                    </label>
+                    <input 
+                      class="content-input" 
+                      type="text" 
+                      placeholder="">
+                    <p class="warn-info">필수 정보입니다.</p>
+                </div>
+                <div class="content">
+                    <label>
+                        생년월일
+                        <span class="content-required"></span>
+                    </label>
+                    <div class="content-date">
+                        <input 
+                        class="content-date-input" 
+                        type="text" 
+                        placeholder="년(4자)">
+                        <select class="content-date-input" id="month">
+                            <option value="0">월</option>
+                            <option value="1">1월</option>
+                            <option value="2">2월</option>
+                            <option value="3">3월</option>
+                            <option value="4">4월</option>
+                            <option value="5">5월</option>
+                            <option value="6">6월</option>
+                            <option value="7">7월</option>
+                            <option value="8">8월</option>
+                            <option value="9">9월</option>
+                            <option value="10">10월</option>
+                            <option value="11">11월</option>
+                            <option value="12">12월</option>
+                        </select>
+                        <input 
+                        class="content-date-input" 
+                        type="text" 
+                        placeholder="일">
+                    </div>
+                    <p class="warn-info">태어난 년도 4자리를 정확하게 입력하세요.</p>
+                </div>
+                <div class="content sex">
+                    <label>
+                        성별
+                        <span class="content-required"></span>
+                    </label>
+                    <select class="content-input" >
+                        <option value="0">성별</option>
+                        <option value="1">남자</option>
+                        <option value="2">여자</option>
+                        <option value="3">선택안함</option>
+                    </select>
+                </div>
+                <div class="content email">
+                    <label>
+                        본인 확인 이메일
+                        <span class="content-required"></span>
+                    </label>
+                    <input 
+                      class="content-input email" 
+                      type="email" 
+                      placeholder="선택입력">
+                </div>
+                <div class="content">
+                    <label>
+                        휴대전화
+                        <span class="content-required"></span>
+                    </label>
+                    <div>
+                        <select class="content-input phone-select">
+                            <option  value="0">대한민국 +82</option>
+                        </select>
+                        <div class="content-input phone">
+                            <input 
+                            class="phone input" 
+                            type="text" 
+                            placeholder="전화번호 입력">
+                            <button class="phone btn">인증번호 받기</button>
+                        </div>
+                         <input 
+                          class="content-input phone-check" 
+                          type="text" 
+                          placeholder="인증번호를 입력하세요">
+                    </div>
+                    <p class="warn-info">필수 정보입니다.</p>
+                </div>
+                <div class="content">
+                    <button class="content-input btn">가입하기</button>
+                </div>
+            </main>
+            <footer class="footer">
+                 <div class="footer top">
+                    <div class="footer top-item">이용약관</div>
+                    <p class="footer top-block">|</p>
+                    <div class="footer top-item">개인정보처리방침</div>
+                    <p class="footer top-block">|</p>
+                    <div class="footer top-item">책임의 한계와 법적고지</div>
+                    <p class="footer top-block">|</p>
+                    <div class="footer top-item">회원정보 고객센터</div>                    
+                </div>
+                <div class="footer bottom">
+                    @NAVER Corp
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
